@@ -20,10 +20,6 @@ export class CategoriesService {
   }
 
   getCategoryPosts(id): Observable<Post[] | undefined> {
-    const rett: any = this.httpClient.get<Post[]>(
-      `/api/categories/${id}/posts`
-    );
-    console.log(rett);
     return this.httpClient.get<Post[]>(`/api/categories/${id}/posts`);
     // .pipe(map((posts) => posts.find((post) => post.id === id)));
   }

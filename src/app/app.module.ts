@@ -16,6 +16,7 @@ import { AuthorDetailsComponent } from './author-details/author-details.componen
 import { AuthorPageComponent } from './author-page/author-page.component';
 import { AuthorsPageComponent } from './authors-page/authors-page.component';
 import { MostviewedpostsComponent } from './mostviewedposts/mostviewedposts.component';
+import { CommentListComponent } from './comment-list/comment-list.component';
 
 @NgModule({
   declarations: [
@@ -32,6 +33,7 @@ import { MostviewedpostsComponent } from './mostviewedposts/mostviewedposts.comp
     AuthorPageComponent,
     AuthorsPageComponent,
     MostviewedpostsComponent,
+    CommentListComponent,
   ],
   imports: [
     BrowserModule,

@@ -32,6 +32,10 @@ export class PostService {
     return this.httpClient.get<Post[]>('/api/posts', opts);
   }
 
+  getPostComments(post: Post): Observable<Comment[]> {
+    return this.httpClient.get<Comment[]>(`/api/posts/${post.id}/comments`);
+  }
+
   getMostViewedPosts(limit): Observable<Post[]> {
     const opts = {
       params: new HttpParams({
