@@ -1,0 +1,27 @@
+<div class="card mb-3" *ngIf="author">
+  <img
+    class="card-img-top"
+    [src]="author.img"
+    alt="{{ author.firstName }} {{ author.lastName }}"
+  />
+  <div class="card-body">
+    <h5 class="card-title">
+      <a [routerLink]="['/author', author.id]">
+        {{ author.firstName }} {{ author.lastName }}</a
+      >
+    </h5>
+    <p class="card-text">{{ author.about }}</p>
+    <p class="card-text">
+      <small class="text-muted">Company: {{ author.company }}</small>
+      <br />
+      <small class="text-muted">Email: {{ author.email }}</small>
+      <br />
+      <small class="text-muted">Likes {{ author.firstName }}</small>
+    </p>
+    <div>
+      <a href="#" class="mx-2">Comments (0)</a>
+      <button (click)="addLike(author)">Like</button>
+      <button (click)="removeLike(author)">Hate</button>
+    </div>
+  </div>
+</div>

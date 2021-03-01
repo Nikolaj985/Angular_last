@@ -21,7 +21,7 @@
         >
           <a class="nav-link" [routerLink]="menuItem.path">{{
             menuItem.title
-            }}</a>
+          }}</a>
         </li>
         <li class="nav-item dropdown">
           <a
@@ -39,9 +39,9 @@
             <a
               class="dropdown-item"
               *ngFor="let category of categories"
-              [routerLink]="['/category', category.id]"
+              [routerLink]="['/categories', category.id]"
               [routerLinkActive]="'active'"
-            >{{ category.title }}</a
+              >{{ category.title }}</a
             >
           </div>
         </li>

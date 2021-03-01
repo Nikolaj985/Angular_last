@@ -1,6 +1,5 @@
 <h4>Recent posts</h4>
-<ul class="nav flex-column">
-  <li class="nav-item" *ngFor="let post of posts$ | async">
-    <a class="nav-link" [routerLink]="['post', post.id]">{{ post.title }} </a>
-  </li>
-</ul>
+
+<ng-container *ngIf="posts$ | async as posts">
+  <app-post-list [posts]="posts"></app-post-list>
+</ng-container>

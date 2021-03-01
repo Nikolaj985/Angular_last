@@ -9,7 +9,7 @@ import { MenuItem } from './shared/menu-item';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss'],
 })
-export class AppComponent implements OnInit{
+export class AppComponent implements OnInit {
   title = 'it-academy';
 
   menuItems: MenuItem[];
@@ -20,20 +20,20 @@ export class AppComponent implements OnInit{
     this.menuItems = [
       {
         path: '/home',
-        title: 'Home'
+        title: 'Home',
       },
       {
         path: '/about',
-        title: 'About'
+        title: 'About',
       },
       {
         path: '/authors',
-        title: 'Authors'
+        title: 'Authors',
       },
       {
         path: '/posts/add',
-        title: 'Write a post'
-      }
+        title: 'Write a post',
+      },
     ];
     this.categories$ = this.categoriesService.getCategories();
   }

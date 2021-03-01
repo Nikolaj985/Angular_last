@@ -1,7 +1,8 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, mapTo } from 'rxjs/operators';
+import { Category } from './shared/category';
 import { Post } from './shared/post';
 
 @Injectable({
@@ -21,6 +22,14 @@ export class PostService {
         mapTo(true),
         catchError(() => of(false))
       );
+  }
+  getRecentPosts(limit) {
+    const opts = {
+      params: new HttpParams({
+        fromString: '_sort=created&_order=desc&_limit=' + limit,
+      }),
+    };
+    return this.httpClient.get<Post[]>('/api/posts', opts);
   }
 
   addPost(post: Post): Observable<Post> {

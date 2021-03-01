@@ -15,8 +15,8 @@ export class RecentPostsComponent implements OnInit {
   constructor(private postService: PostService) {}
 
   ngOnInit(): void {
-    this.posts$ = this.postService
-      .loadPosts()
-      .pipe(map((posts: Post[]) => posts.reverse().slice(0, 3)));
+    this.posts$ = this.postService.getRecentPosts(10);
+
+    // loadPosts().pipe(map((posts: Post[]) => posts.reverse().slice(0, 3)));
   }
 }

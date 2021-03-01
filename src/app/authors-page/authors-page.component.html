@@ -1,0 +1,5 @@
+<ng-container *ngIf="authors$ | async as authors">
+  <ng-container *ngFor="let author of authors">
+    <app-author-details [author]="author"> </app-author-details>
+  </ng-container>
+</ng-container>

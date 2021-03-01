@@ -1,0 +1,7 @@
+<ng-container *ngIf="author$ | async as author">
+  <app-author-details [author]="author"> </app-author-details>
+  <ng-container *ngIf="posts$ | async as posts">
+    <h4>Posts by author:</h4>
+    <app-post-list [posts]="posts"></app-post-list>
+  </ng-container>
+</ng-container>
