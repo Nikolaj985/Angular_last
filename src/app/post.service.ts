@@ -23,10 +23,19 @@ export class PostService {
         catchError(() => of(false))
       );
   }
-  getRecentPosts(limit) {
+  getRecentPosts(limit): Observable<Post[]> {
     const opts = {
       params: new HttpParams({
         fromString: '_sort=created&_order=desc&_limit=' + limit,
+      }),
+    };
+    return this.httpClient.get<Post[]>('/api/posts', opts);
+  }
+
+  getMostViewedPosts(limit): Observable<Post[]> {
+    const opts = {
+      params: new HttpParams({
+        fromString: '_sort=views&_order=desc&_limit=' + limit,
       }),
     };
     return this.httpClient.get<Post[]>('/api/posts', opts);
