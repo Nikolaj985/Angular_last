@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { UserService } from '../services/user.service';
 import { User } from '../shared/user';
 
 @Component({
@@ -9,11 +10,14 @@ import { User } from '../shared/user';
 export class UserDetailsComponent implements OnInit {
   @Input() user: User;
 
-  constructor() {}
+  constructor(private userService: UserService) {}
 
   ngOnInit(): void {}
 
   removeLike(user: User) {}
 
   addLike(user: User) {}
+  deleteUser(id: string): void {
+    this.userService.deleteUser(id).subscribe();
+  }
 }

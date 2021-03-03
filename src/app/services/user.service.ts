@@ -20,4 +20,7 @@ export class UserService implements OnInit {
   addNewUser(user: User) {
     return this.httpClient.post(`api/users`, user);
   }
+  deleteUser(id: string) {
+    return this.httpClient.delete(`api/users/${id}`);
+  }
 }

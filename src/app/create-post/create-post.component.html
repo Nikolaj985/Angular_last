@@ -26,6 +26,13 @@
     </div>
   </div>
   <div class="form-group">
+    <label for="img">Post Image</label>
+    <input class="form-control" id="img" type="text" formControlName="img" />
+    <div [hidden]="img.valid || img.pristine">
+      <div *ngIf="img.errors?.required">Post Image is required.</div>
+    </div>
+  </div>
+  <div class="form-group">
     <label for="content">Post Content</label>
     <input
       class="form-control"

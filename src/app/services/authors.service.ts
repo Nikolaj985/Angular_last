@@ -22,4 +22,7 @@ export class AuthorsService {
   getAuthorPosts(id): Observable<Post[]> {
     return this.httpClient.get<Post[]>(`/api/authors/${id}/posts`);
   }
+  deleteAuthor(id: string) {
+    return this.httpClient.delete(`/api/authors/${id}`);
+  }
 }

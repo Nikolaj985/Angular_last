@@ -24,4 +24,11 @@
       <button (click)="removeLike(author)">Hate</button>
     </div>
   </div>
+  <button
+    type="button"
+    class="btn btn-danger float-right"
+    (click)="deleteAuthor(author.id)"
+  >
+    Delete
+  </button>
 </div>

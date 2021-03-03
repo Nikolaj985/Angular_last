@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Observable, Subscription } from 'rxjs';
-import { tap, switchMap } from 'rxjs/operators';
+import { tap, switchMap, map } from 'rxjs/operators';
 import { PostService } from '../post.service';
 import { Comment } from '../shared/comment';
 import { Post } from '../shared/post';
@@ -16,6 +16,7 @@ export class PostDetailsComponent implements OnInit {
   post$: Observable<Post>;
   post: Post;
   comments$: Observable<Comment[]>;
+  activeId$: Observable<string>;
 
   constructor(
     private activatedRoute: ActivatedRoute,
@@ -23,18 +24,20 @@ export class PostDetailsComponent implements OnInit {
   ) {}
 
   ngOnInit(): void {
-    this.post$ = this.activatedRoute.paramMap.pipe(
-      switchMap((params: ParamMap) => {
-        const id = params.get('id');
-        return this.postService.getPost(id);
-      })
+    // this.activeId$ = this.activatedRoute.paramMap.pipe(
+    //   switchMap((params: ParamMap) => params.get('id'))
+    // );
+
+    this.activeId$ = this.activatedRoute.paramMap.pipe(
+      map((paramMap) => paramMap.get('id'))
     );
 
-    this.comments$ = this.activatedRoute.paramMap.pipe(
-      switchMap((params: ParamMap) => {
-        const id = params.get('id');
-        return this.postService.getPostComments(id);
-      })
+    this.post$ = this.activeId$.pipe(
+      switchMap((id) => this.postService.getPost(id))
+    );
+
+    this.comments$ = this.activeId$.pipe(
+      switchMap((id) => this.postService.getPostComments(id))
     );
   }
 
