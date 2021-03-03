@@ -45,4 +45,7 @@ export class PostDetailsComponent implements OnInit {
   removeLike(post: Post): void {
     this.postService.removeLike(post).subscribe();
   }
+  deletePost(id: string) {
+    this.postService.deletePost(id).subscribe();
+  }
 }

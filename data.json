@@ -728,6 +728,12 @@
       ],
       "views": 765,
       "likes": 907
+    },
+    {
+      "author": "ASDDFSADF",
+      "title": "SDFDFSAVSDFAF",
+      "content": "SDGSDFGAREGBDFHGSGARHTYJEDSWRQĘQERAGSTHRYTĮQĖRWĘE",
+      "id": "R_-JCKI"
     }
   ],
   "comments": [
@@ -786,13 +792,6 @@
       "postId": "5e4da8549351b8b4e588b159",
       "content": "Officia sint occaecat excepteur ex eu.",
       "created": 1500733753259
-    },
-    {
-      "id": "5e4da854a73b54e00560b5e8",
-      "userId": "5e4da854d6653dc6d9934835",
-      "postId": "5e4da8544bc674dc57070b00",
-      "content": "Ipsum esse in duis amet. Pariatur tempor commodo ut irure reprehenderit amet quis deserunt sunt. Lorem qui tempor exercitation amet laboris enim amet cupidatat pariatur in aliquip aute id.",
-      "created": 1538569413655
     },
     {
       "id": "5e4da8541d1788979839c24d",
@@ -1430,41 +1429,6 @@
       "postId": "5e4da8549351b8b4e588b159",
       "content": "Laborum sint eu excepteur id dolore mollit voluptate.",
       "created": 1559901998771
-    },
-    {
-      "userId": "dzfasdzdf",
-      "postId": "5e4da854461e99392b7a0ac6",
-      "content": "sdfsdfsdf",
-      "created": 1614703258692,
-      "id": "dU0jx7U"
-    },
-    {
-      "userId": "AJBJDHsjhbda",
-      "postId": "5e4da854461e99392b7a0ac6",
-      "content": "`mn\\svdjnkjvdsf",
-      "created": 1614705724108,
-      "id": "G4U3WMK"
-    },
-    {
-      "userId": "Author Name",
-      "postId": "5e4da8545c15ef7651154fc5",
-      "content": "kjsadhbjfgsaejyufgasiuhdfuisvhsa",
-      "created": 1614705937218,
-      "id": "S0pvySB"
-    },
-    {
-      "userId": "5e4da8547e9f0cd13457d734",
-      "postId": "5e4da8546b9a80226b9bdccd",
-      "content": "Testt tssttst",
-      "created": 1614762373584,
-      "id": "j6H20jV"
-    },
-    {
-      "userId": "5e4da854fb07d194693146d5",
-      "postId": "5e4da8546b9a80226b9bdccd",
-      "content": "AAAAAAAAAAA",
-      "created": 1614762492883,
-      "id": "U1QDYCF"
     }
   ]
 }

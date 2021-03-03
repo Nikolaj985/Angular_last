@@ -21,4 +21,8 @@ export class CommentService {
   addNewComment(comment: Comment) {
     return this.httpClient.post('/api/comments', comment);
   }
+
+  deleteComment(id: string) {
+    return this.httpClient.delete(`/api/comments/${id}`);
+  }
 }

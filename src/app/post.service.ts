@@ -67,4 +67,7 @@ export class PostService {
       likes: post.likes - 1,
     });
   }
+  deletePost(id: string) {
+    return this.httpClient.delete<Post>(`/api/posts/${id}`);
+  }
 }

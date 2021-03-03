@@ -20,5 +20,14 @@
       <button (click)="removeLike(post)">Hate</button>
     </div>
   </div>
+  <div>
+    <button
+      type="button"
+      class="btn btn-danger float-right"
+      (click)="deletePost(post.id)"
+    >
+      Delete
+    </button>
+  </div>
   <app-comment-form [post]="post"></app-comment-form>
 </div>

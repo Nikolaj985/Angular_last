@@ -19,7 +19,8 @@ export class CommentListComponent implements OnInit {
 
   constructor(
     private postService: PostService,
-    private activatedRoute: ActivatedRoute
+    private activatedRoute: ActivatedRoute,
+    private commentService: CommentService
   ) {}
 
   ngOnInit(): void {
@@ -33,5 +34,8 @@ export class CommentListComponent implements OnInit {
         );
       })
     );
+  }
+  deleteComment(id: string) {
+    this.commentService.deleteComment(id).subscribe();
   }
 }
