@@ -17,6 +17,8 @@ import { AuthorPageComponent } from './author-page/author-page.component';
 import { AuthorsPageComponent } from './authors-page/authors-page.component';
 import { MostviewedpostsComponent } from './mostviewedposts/mostviewedposts.component';
 import { CommentListComponent } from './comment-list/comment-list.component';
+import { CommentComponent } from './comment/comment.component';
+import { CommentFormComponent } from './comment-form/comment-form.component';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,8 @@ import { CommentListComponent } from './comment-list/comment-list.component';
     AuthorsPageComponent,
     MostviewedpostsComponent,
     CommentListComponent,
+    CommentComponent,
+    CommentFormComponent,
   ],
   imports: [
     BrowserModule,

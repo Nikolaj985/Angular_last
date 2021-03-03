@@ -1,0 +1,5 @@
+<div *ngIf="post$ | async as post">
+  <h4>All Comments for post {{ post.title }}</h4>
+  <app-comment-list [post]="post"></app-comment-list>
+  <app-comment-form [post]="post"></app-comment-form>
+</div>

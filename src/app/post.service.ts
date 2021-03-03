@@ -3,6 +3,7 @@ import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
 import { catchError, mapTo } from 'rxjs/operators';
 import { Category } from './shared/category';
+import { Comment } from './shared/comment';
 import { Post } from './shared/post';
 
 @Injectable({
@@ -32,8 +33,8 @@ export class PostService {
     return this.httpClient.get<Post[]>('/api/posts', opts);
   }
 
-  getPostComments(post: Post): Observable<Comment[]> {
-    return this.httpClient.get<Comment[]>(`/api/posts/${post.id}/comments`);
+  getPostComments(id: string): Observable<Comment[]> {
+    return this.httpClient.get<Comment[]>(`/api/posts/${id}/comments`);
   }
 
   getMostViewedPosts(limit): Observable<Post[]> {

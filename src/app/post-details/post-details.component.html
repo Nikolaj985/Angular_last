@@ -12,11 +12,13 @@
       <br />
       <small class="text-muted">Likes {{ post.likes }}</small>
     </p>
-    <div>
-      <a href="#" class="mx-2">Comments (0)</a>
+    <div *ngIf="comments$ | async as comments">
+      <a class="mx-2" [routerLink]="['/post/', post.id, 'comments']"
+        >Comments ( {{ comments.length }} )</a
+      >
       <button (click)="addLike(post)">Like</button>
       <button (click)="removeLike(post)">Hate</button>
     </div>
   </div>
-  <app-comment-list [post]="post"></app-comment-list>
+  <app-comment-form [post]="post"></app-comment-form>
 </div>

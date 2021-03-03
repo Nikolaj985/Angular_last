@@ -1,7 +1,8 @@
 <ng-container *ngIf="comments$ | async as comments">
-  <ul>
-    <li *ngFor="let comment of comments">
-      <a [routerLink]="['/comment', comment.id]">{{ comment.content }}</a>
-    </li>
-  </ul>
+  <div class="card w-100" *ngFor="let comment of comments">
+    <div class="card-body">
+      <h5 class="card-title">{{ comment.created | date }}</h5>
+      <p class="card-text">{{ comment.content }}</p>
+    </div>
+  </div>
 </ng-container>
