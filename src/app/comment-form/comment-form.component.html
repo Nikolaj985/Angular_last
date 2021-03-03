@@ -1,18 +1,22 @@
-<div class="container pb-cmnt-container">
+<div class="container pb-cmnt-container" *ngIf="users$ | async as users">
   <div class="row">
     <div class="col-md-3"></div>
     <div class="col-md-9">
       <h4 class="float-right">Add New Comment</h4>
       <form [formGroup]="addNewCommentForm" (ngSubmit)="createComment(post)">
         <div class="form-group">
-          <input
+          <label for="commentAuthor">Please select user id</label>
+          <select
             type="text"
             class="form-control"
             name="commentAuthor"
             formControlName="commentAuthor"
             id="commentAuthor"
             placeholder="Please enter name"
-          />
+          >
+            <option></option>
+            <option *ngFor="let user of users">{{ user.id }}</option>
+          </select>
         </div>
         <div
           [hidden]="
