@@ -79,6 +79,14 @@
       "firstName": "Kim",
       "lastName": "Pickett",
       "email": "kim.pickett@scenty.biz"
+    },
+    {
+      "img": "https://media.gettyimages.com/photos/in-this-undated-handout-photo-from-eon-productions-actor-daniel-craig-picture-id55920525?s=612x612",
+      "imgFull": "https://media.gettyimages.com/photos/in-this-undated-handout-photo-from-eon-productions-actor-daniel-craig-picture-id55920525?s=612x612",
+      "firstName": "James",
+      "lastName": "Bond",
+      "email": "007@mi5.co.uk",
+      "id": "xqo64Ph"
     }
   ],
   "authors": [

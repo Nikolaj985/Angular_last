@@ -22,6 +22,7 @@ import { CommentFormComponent } from './comment-form/comment-form.component';
 import { UsersPageComponent } from './users-page/users-page.component';
 import { UserPageComponent } from './user-page/user-page.component';
 import { UserDetailsComponent } from './user-details/user-details.component';
+import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 
 @NgModule({
   declarations: [
@@ -44,6 +45,7 @@ import { UserDetailsComponent } from './user-details/user-details.component';
     UsersPageComponent,
     UserPageComponent,
     UserDetailsComponent,
+    AddNewUserComponent,
   ],
   imports: [
     BrowserModule,

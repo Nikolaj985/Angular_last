@@ -17,4 +17,7 @@ export class UserService implements OnInit {
   getUsers(): Observable<User[]> {
     return this.httpClient.get<User[]>(`api/users`);
   }
+  addNewUser(user: User) {
+    return this.httpClient.post(`api/users`, user);
+  }
 }

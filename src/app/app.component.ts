@@ -38,6 +38,10 @@ export class AppComponent implements OnInit {
         path: '/posts/add',
         title: 'Write a post',
       },
+      {
+        path: 'add/user',
+        title: 'Add New User',
+      },
     ];
     this.categories$ = this.categoriesService.getCategories();
   }

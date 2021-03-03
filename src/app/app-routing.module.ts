@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { AddNewUserComponent } from './add-new-user/add-new-user.component';
 import { AuthorPageComponent } from './author-page/author-page.component';
 import { AuthorsPageComponent } from './authors-page/authors-page.component';
 import { CategoryPageComponent } from './category-page/category-page.component';
@@ -19,6 +20,7 @@ const routes: Routes = [
   { path: 'categories/:id/posts', component: CategoryPageComponent },
   { path: 'authors', component: AuthorsPageComponent },
   { path: 'author/:id', component: AuthorPageComponent },
+  { path: 'add/user', component: AddNewUserComponent },
   { path: 'users', component: UsersPageComponent },
   { path: 'user/:id', component: UserPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
