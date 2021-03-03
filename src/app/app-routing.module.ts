@@ -7,6 +7,7 @@ import { CommentComponent } from './comment/comment.component';
 import { CreatePostComponent } from './create-post/create-post.component';
 import { HomeComponent } from './home/home.component';
 import { PostDetailsComponent } from './post-details/post-details.component';
+import { UserPageComponent } from './user-page/user-page.component';
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'categories/:id/posts', component: CategoryPageComponent },
   { path: 'authors', component: AuthorsPageComponent },
   { path: 'author/:id', component: AuthorPageComponent },
+  { path: 'user/:id', component: UserPageComponent },
   { path: '', redirectTo: '/home', pathMatch: 'full' },
   // { path: "**", component: NotFoundComponent }
 ];

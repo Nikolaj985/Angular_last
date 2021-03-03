@@ -19,6 +19,9 @@ import { MostviewedpostsComponent } from './mostviewedposts/mostviewedposts.comp
 import { CommentListComponent } from './comment-list/comment-list.component';
 import { CommentComponent } from './comment/comment.component';
 import { CommentFormComponent } from './comment-form/comment-form.component';
+import { UsersPageComponent } from './users-page/users-page.component';
+import { UserPageComponent } from './user-page/user-page.component';
+import { UserDetailsComponent } from './user-details/user-details.component';
 
 @NgModule({
   declarations: [
@@ -38,6 +41,9 @@ import { CommentFormComponent } from './comment-form/comment-form.component';
     CommentListComponent,
     CommentComponent,
     CommentFormComponent,
+    UsersPageComponent,
+    UserPageComponent,
+    UserDetailsComponent,
   ],
   imports: [
     BrowserModule,
