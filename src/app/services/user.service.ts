@@ -6,12 +6,15 @@ import { User } from '../shared/user';
 @Injectable({
   providedIn: 'root',
 })
-export class UserServiceService implements OnInit {
+export class UserService implements OnInit {
   constructor(private httpClient: HttpClient) {}
 
   ngOnInit() {}
 
   getUser(id): Observable<User> {
     return this.httpClient.get<User>(`api/users/${id}`);
+  }
+  getUsers(): Observable<User[]> {
+    return this.httpClient.get<User[]>(`api/users`);
   }
 }

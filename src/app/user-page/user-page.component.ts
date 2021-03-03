@@ -2,7 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { Observable } from 'rxjs';
 import { map, switchMap } from 'rxjs/operators';
-import { UserServiceService } from '../services/user.service';
+import { UserService } from '../services/user.service';
 import { User } from '../shared/user';
 
 @Component({
@@ -16,7 +16,7 @@ export class UserPageComponent implements OnInit {
 
   constructor(
     private activatedRoute: ActivatedRoute,
-    private userService: UserServiceService
+    private userService: UserService
   ) {}
 
   ngOnInit(): void {

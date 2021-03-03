@@ -1,1 +1,5 @@
-<p>users-page works!</p>
+<ng-container *ngIf="users$ | async as users">
+  <ng-container *ngFor="let user of users">
+    <app-user-details [user]="user"> </app-user-details>
+  </ng-container>
+</ng-container>
