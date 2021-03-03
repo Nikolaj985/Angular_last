@@ -31,6 +31,10 @@ export class AppComponent implements OnInit {
         title: 'Authors',
       },
       {
+        path: '/users',
+        title: 'Users',
+      },
+      {
         path: '/posts/add',
         title: 'Write a post',
       },
